@@ -69,26 +69,25 @@
   }
 
   .sidebar-logo-mark {
-    width: 36px; height: 36px;
+    width: 70px; height: 70px;
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
   }
-  .sidebar-logo-mark img { width: 36px; height: 36px; object-fit: contain; }
+  .sidebar-logo-mark img { width: 70px; height: 70px; object-fit: contain; }
 
   .sidebar-brand-name {
     font-family: var(--font-head);
-    font-size: 15px;
+    font-size: 2em;
     font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    letter-spacing: 0.01em;
     color: var(--cf-white);
   }
   .sidebar-brand-sub {
     font-family: var(--font-body);
     font-size: 11px;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 0.05em;
-    margin-top: 2px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
   }
 
   .sidebar-nav { padding: 20px 0; flex: 1; }
@@ -183,17 +182,9 @@
     margin-bottom: 16px;
   }
 
-  .hero-title {
-    font-family: var(--font-head);
-    font-size: clamp(48px, 6vw, 72px);
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: 1.0;
+  .hero-logo-lockup {
     margin-bottom: 20px;
-    text-transform:uppercase;
   }
-
-  .hero-title span { color: #ffffff; }
 
   .hero-desc {
     font-family: var(--font-sub);
@@ -301,55 +292,6 @@
   .logo-card.dark { background: var(--cf-black); }
   .logo-card.cream { background: var(--cf-cream); }
   .logo-card.rust { background: var(--cf-rust); }
-
-  /* SVG Logo Placeholder */
-  .logo-svg-full {
-    display: flex; align-items: center; gap: 12px;
-  }
-  .logo-svg-full .logomark {
-    width: 44px; height: 44px;
-    background: var(--cf-rust);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .logo-card.dark .logo-svg-full .logomark { background: var(--cf-rust); }
-  .logo-card.rust .logo-svg-full .logomark { background: white; }
-  .logo-card.cream .logo-svg-full .logomark { background: var(--cf-rust); }
-
-  .logo-svg-full .logomark svg { width: 24px; height: 24px; fill: white; }
-  .logo-card.rust .logo-svg-full .logomark svg { fill: var(--cf-rust); }
-
-  .logo-svg-full .logotype {
-    font-family: var(--font-head);
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-  .logo-svg-full .logotype small {
-    display: block;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    font-weight: 400;
-    margin-top: 3px;
-    opacity: 0.6;
-  }
-
-  .logo-card:not(.dark):not(.rust) .logotype { color: var(--cf-black); }
-  .logo-card.dark .logotype { color: white; }
-  .logo-card.rust .logotype { color: white; }
-
-  /* Logomark only */
-  .logo-mark-only {
-    width: 60px; height: 60px;
-    background: var(--cf-rust);
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .logo-card.dark .logo-mark-only { background: var(--cf-rust); }
-  .logo-mark-only svg { width: 34px; height: 34px; fill: white; }
 
   /* Downloads */
   .download-row {
@@ -633,7 +575,7 @@
     .ctx-example-grid { grid-template-columns: 1fr; }
   }
 
-  /* ─── COLOR SECTION (old classes kept for packaging section) ─────────────── */
+  /* ─── COLOR SECTION ─────────────────────────────────── */
   .color-group-label {
     font-family: var(--font-head);
     font-size: 13px;
@@ -958,89 +900,6 @@
   }
   .pkg-card-body.dark .pkg-card-bg-label { color: rgba(255,255,255,0.2); }
 
-  /* Horizontal lockup */
-  .pkg-logo-horizontal {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .pkg-logo-horizontal .pkg-mark {
-    width: 52px; height: 52px;
-    background: #0a0a0a;
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .pkg-card-body.dark .pkg-logo-horizontal .pkg-mark { background: #ffffff; }
-  .pkg-logo-horizontal .pkg-mark svg { width: 28px; height: 28px; fill: white; }
-  .pkg-card-body.dark .pkg-logo-horizontal .pkg-mark svg { fill: #0a0a0a; }
-
-  .pkg-logo-horizontal .pkg-wordmark {
-    display: flex; flex-direction: column;
-  }
-  .pkg-wordmark-primary {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    line-height: 1;
-    color: var(--cf-black);
-  }
-  .pkg-wordmark-sub {
-    font-family: var(--font-body);
-    font-size: 9.5px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--cf-mid);
-    margin-top: 5px;
-  }
-  .pkg-card-body.dark .pkg-wordmark-primary { color: white; }
-  .pkg-card-body.dark .pkg-wordmark-sub { color: rgba(255,255,255,0.4); }
-  .pkg-card-body.cream .pkg-wordmark-primary { color: var(--cf-black); }
-
-  /* Vertical lockup */
-  .pkg-logo-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-  .pkg-logo-vertical .pkg-mark {
-    width: 64px; height: 64px;
-    background: #0a0a0a;
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .pkg-logo-vertical .pkg-mark svg { width: 34px; height: 34px; fill: white; }
-  .pkg-card-body.dark .pkg-logo-vertical .pkg-mark { background: #ffffff; }
-  .pkg-card-body.dark .pkg-logo-vertical .pkg-mark svg { fill: #0a0a0a; }
-
-  .pkg-logo-vertical .pkg-wordmark {
-    display: flex; flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .pkg-logo-vertical .pkg-wordmark-primary {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    line-height: 1;
-    color: var(--cf-black);
-  }
-  .pkg-logo-vertical .pkg-wordmark-sub {
-    font-family: var(--font-body);
-    font-size: 9px;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--cf-mid);
-    margin-top: 5px;
-  }
-  .pkg-card-body.dark .pkg-logo-vertical .pkg-wordmark-primary { color: white; }
-  .pkg-card-body.dark .pkg-logo-vertical .pkg-wordmark-sub { color: rgba(255,255,255,0.35); }
-
   /* Spec table */
   .pkg-spec-table {
     width: 100%;
@@ -1117,7 +976,7 @@
 <nav id="sidebar">
   <div class="sidebar-brand">
     <div class="sidebar-logo-mark">
-      <img src="https://cdn.shopify.com/s/files/1/1393/2767/files/cf-logo-mark-dark.svg" alt="CultureFly mark" style="width:36px;height:36px;object-fit:contain;" />
+      <img src="https://cdn.shopify.com/s/files/1/1393/2767/files/cf-logo-mark-dark.svg" alt="CultureFly mark" style="width:70px;height:70px;object-fit:contain;" />
     </div>
     <div class="sidebar-brand-name">CultureFly</div>
     <div class="sidebar-brand-sub">Brand Guidelines</div>
@@ -1144,7 +1003,9 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-eyebrow">Brand Guidelines</div>
-    <h1 class="hero-title">Culture<span>Fly</span></h1>
+    <div class="hero-logo-lockup">
+      <img src="https://cdn.shopify.com/s/files/1/1393/2767/files/cf-logo-dark.svg" alt="CultureFly" style="max-height:80px; max-width:420px; width:100%; object-fit:contain;" />
+    </div>
     <p class="hero-desc">A reference for everyone who works with our brand. Use these guidelines to keep CultureFly looking and feeling consistent everywhere.</p>
     <div class="hero-meta">
       <div class="hero-meta-item">
@@ -1332,7 +1193,7 @@
     </div>
 
     <!-- Accent usage rules -->
-  <div class="accent-usage-note">
+    <div class="accent-usage-note">
       <span class="aun-icon">↗</span>
       <span>Use Signal Green <strong>at most once per surface</strong>, only on black or white backgrounds, and only when no other solution communicates the emphasis. Never use it decoratively.</span>
     </div>
